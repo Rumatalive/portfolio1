@@ -6,20 +6,19 @@ def main():
     
     # Sidebar for navigation
     st.sidebar.title("Navigation")
-    options = ["Home", "Projects", "Skills & Achievements", "Customize Profile", "Contact"]
-    selection = st.sidebar.radio("Go to", options)
+    page = st.sidebar.radio("Go to", ["Home", "Projects", "Skills & Achievements", "Customize Profile", "Contact"])
 
     # Page selection
-    if selection == "Home":
-        home.display()
-    elif selection == "Projects":
-        projects.display()
-    elif selection == "Skills & Achievements":
-        skills_achievements.display()
-    elif selection == "Customize Profile":
-        customize_profile.display()
-    elif selection == "Contact":
-        contact.display()
+    if page == "Home":
+        home.show()
+    elif page == "Projects":
+        projects.show()
+    elif page == "Skills & Achievements":
+        skills_achievements.show()
+    elif page == "Customize Profile":
+        customize_profile.show()
+    elif page == "Contact":
+        contact.show()
 
 if __name__ == "__main__":
     main()
